@@ -3,10 +3,10 @@ version: "3"
 services:
 
  webapp:
-  image: 1510008147/docker-01:1.0
+  image: 1510008147/tcc-docker:1.0
   deploy:
     mode: replicated
-    replicas: 10 
+    replicas: 1 
     restart_policy:
       condition: on-failure
       delay: 3s
