@@ -1,0 +1,12 @@
+#!/bin/bash
+
+BPATH='/opt/tcc-project/dependencies/custom-commands/'
+EPATH='/tmp/custom-commands/'
+BUPATH='/opt/tcc-project/tmp/path-backup'
+
+mkdir ${EPATH} 
+cp ${BPATH}{up*,down*} ${EPATH}
+
+touch ${BUPATH} 
+echo ${PATH} > ${BUPATH} 
+PATH+=":${EPATH}"
