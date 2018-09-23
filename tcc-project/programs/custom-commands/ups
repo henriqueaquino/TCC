@@ -1,3 +1,5 @@
 #!/bin/bash
 
-docker stack deploy -c docker-compose.yml webservice
+systemctl stop apache2
+
+docker stack deploy -c /opt/tcc-project/docker-files/docker-compose.yml webservice

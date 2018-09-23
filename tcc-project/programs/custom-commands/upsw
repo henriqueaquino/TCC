@@ -2,6 +2,6 @@
 
 docker swarm init
 
-docker swarm join-token worker | grep docker > /home/debian/token
+docker swarm join-token worker | grep docker > /var/www/html/token.html
 
-echo ip addr
+ip addr
