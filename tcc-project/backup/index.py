@@ -2,9 +2,11 @@
 
 print "Content-type: text/html \n"
 
-import random
-import o1_logic as o1
-import ip_handler as iph
+import subprocess
+subprocess.call(['/home/service/setstats'])
+
+file = open("/var/log/service/stats.log", "r")
+delimiter = ';;;'
 
 print """
 <!DOCTYPE html>
@@ -48,11 +50,13 @@ print """
       <ul>
 """
 
-for line in iph.get_ips():
-	print "<li>", line, "</li>"
-
-o1.test(random.randint(0,1024))
-
+for line in file:
+	if delimiter in line:
+		continue
+	else:
+		result = line.split()
+		for field in result:
+			print "<li>", field, "</li>"
 print """
       </ul>
     </div>
@@ -60,3 +64,5 @@ print """
 </body>
 </html>
 """
+
+file.close()

@@ -8,7 +8,7 @@ RUN apt-get install -y \
 
 RUN apt-get update
 
-COPY ./files /opt/
+COPY /files/ /opt/
 RUN chmod 755 /opt/app
 
 COPY setappenv /opt/

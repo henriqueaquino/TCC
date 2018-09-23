@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BPATH='/opt/tcc-project/dependencies/custom-commands/'
+BPATH='/opt/tcc-project/programs/custom-commands/'
 EPATH='/tmp/custom-commands/'
 BUPATH='/opt/tcc-project/tmp/path-backup'
 
