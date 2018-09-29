@@ -2,7 +2,7 @@ version: "3"
 
 services:
 
- webapp:
+ app:
   image: 1510008147/tcc-docker:1.0
   deploy:
     mode: replicated

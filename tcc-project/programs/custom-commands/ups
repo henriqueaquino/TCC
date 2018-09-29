@@ -2,4 +2,4 @@
 
 systemctl stop apache2
 
-docker stack deploy -c /opt/tcc-project/docker-files/docker-compose.yml webservice
+docker stack deploy -c /opt/tcc-project/docker-files/docker-compose.yml web
