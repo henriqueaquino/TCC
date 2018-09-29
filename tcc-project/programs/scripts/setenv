@@ -9,4 +9,3 @@ cp ${BPATH}{up*,down*} ${EPATH}
 
 touch ${BUPATH} 
 echo ${PATH} > ${BUPATH} 
-PATH+=":${EPATH}"
