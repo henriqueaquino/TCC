@@ -3,8 +3,7 @@
 print "Content-type: text/html \n"
 
 import random
-import o1_logic as o1
-import ip_handler as iph
+import iphandler as iph
 
 print """
 <!DOCTYPE html>
@@ -50,8 +49,6 @@ print """
 
 for line in iph.get_ips():
 	print "<li>", line, "</li>"
-
-o1.test(random.randint(0,1024))
 
 print """
       </ul>
