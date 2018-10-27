@@ -1,0 +1,9 @@
+#!/bin/bash
+
+path='/var/log/service/stats.log'
+delimiter=';;;'
+
+ip addr | grep inet | cut -d' ' -f6 | grep '^[0-9]' > ${path} 
+echo ${delimiter} >> ${path}
+
+chmod 755 ${path} 

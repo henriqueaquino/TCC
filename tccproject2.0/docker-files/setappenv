@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cp /opt/app/dependencies/python-cgi.conf /etc/apache2/conf-available/
+a2enconf python-cgi.conf
+
+cp -r /opt/app/py /var/www/
+chmod 755 /var/www/py/*.py
