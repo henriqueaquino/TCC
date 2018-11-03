@@ -1,0 +1,8 @@
+#!/bin/bash
+
+mpstat | grep all | cut -d ' ' -f 8,16 > stats/mpR
+
+while (( ${SECONDS} <= 60 ))
+do
+	mpstat | grep all | cut -d ' ' -f 8,16 >> stats/mpR
+done

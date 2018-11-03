@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo $(docker stats --no-stream) > tmpstats
+
+for (( i = 0; i < 60; i++ ))
+	do
+		if (( $i % 10 == 0 )) 
+		then
+			echo $(docker stats --no-stream) >> tmpstats
+		fi
+	done

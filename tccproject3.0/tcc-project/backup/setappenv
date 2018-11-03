@@ -1,0 +1,20 @@
+#!/bin/bash
+
+cp /opt/app/dependencies/python-cgi.conf /etc/apache2/conf-available/
+a2enconf python-cgi.conf
+
+cp -r /opt/app/py /var/www/
+chmod 755 /var/www/py/*.py
+
+PATH1='/var/log/service'
+PATH2='/home/service/'
+
+mkdir ${PATH1} 
+chmod 755 ${PATH1} 
+
+mkdir ${PATH2}
+chmod 755 ${PATH2}
+
+cp /opt/app/dependencies/setstats ${PATH2}
+chmod 755 "${PATH2}setstats"
+${PATH2}setstats
