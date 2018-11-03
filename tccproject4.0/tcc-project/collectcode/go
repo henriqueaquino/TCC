@@ -1,0 +1,6 @@
+#!/bin/bash
+top -b -d 0.1 -n 2 | grep %Cpu | tail -n 1 > res 
+while (( ${SECONDS} <= 60 ))
+do
+	top -b -d 0.1 -n 2 | grep %Cpu | tail -n 1 >> res 
+done

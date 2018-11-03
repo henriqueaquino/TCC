@@ -1,0 +1,8 @@
+#!/bin/bash
+top -b -d 0.1 -n 2 | grep %Cpu | cut -d ' ' -f 3,6,9 | tail -n 1 | gawk '{if ($2+$4+$6 != 0){print $2+$4+$6}}' > res 
+#top -b -d 0.1 -n 2 | grep %Cpu | cut -d ' ' -f 3,6,9 | tail -n 1 | gawk '{print $2+$4+$6}' > res 
+while (( ${SECONDS} <= 60 ))
+do
+	top -b -d 0.1 -n 2 | grep %Cpu | cut -d ' ' -f 3,6,9 | tail -n 1 | gawk '{if ($2+$4+$6 != 0){print $2+$4+$6}}' >> res 
+	#top -b -d 0.1 -n 2 | grep %Cpu | cut -d ' ' -f 3,6,9 | tail -n 1 | gawk '{print $2+$4+$6}' >> res
+done
