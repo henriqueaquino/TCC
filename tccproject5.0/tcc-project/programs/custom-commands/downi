@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker image rm 1510008147/tcc-docker:1.0 --force

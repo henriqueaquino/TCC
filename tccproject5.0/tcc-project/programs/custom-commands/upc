@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/etc/init.d/apache2 stop
+
+docker run --name='container' --publish='80:80' --detach 1510008147/tcc-docker:1.0 
