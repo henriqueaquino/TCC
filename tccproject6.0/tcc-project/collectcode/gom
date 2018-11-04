@@ -1,0 +1,6 @@
+#!/bin/bash
+top -b -d 0.1 -n 2 | grep cache | tail -n 1 > resm 
+while (( ${SECONDS} <= 60 ))
+do
+	top -b -d 0.1 -n 2 | grep cache | tail -n 1 >> resm 
+done
