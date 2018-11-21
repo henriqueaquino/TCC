@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker build --tag 1510008147/my-image-two:1.0 /opt/docker/my-image-two/

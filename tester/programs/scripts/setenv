@@ -1,0 +1,7 @@
+#!/bin/bash
+
+BPATH='/opt/programs/c/'
+EPATH='/tmp/c/'
+
+mkdir ${EPATH} 
+cp ${BPATH}{up*,down*} ${EPATH}

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+systemctl stop apache2
+
+docker stack deploy -c /opt/docker/docker-compose.yml web

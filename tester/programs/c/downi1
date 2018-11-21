@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker image rm 1510008147/my-image-one:1.0 --force

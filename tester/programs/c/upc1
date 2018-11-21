@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/etc/init.d/apache2 stop
+
+docker run --name='container-one' --publish='80:80' --detach 1510008147/my-image-one:1.0 
